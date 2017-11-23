@@ -6,7 +6,7 @@ var redirectApp = express () ,
 redirectServer = http.createServer(redirectApp);
 
 
-redirectServer.get('*',function(req,res){  
+redirectApp.get('*',function(req,res){  
     res.redirect('https://' + req.headers.host + req.url)
 });
 
